@@ -1,0 +1,1 @@
+var boom = angular.module('Boom', ['ui.router', 'firebase']);
