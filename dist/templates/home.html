@@ -1,1 +1,40 @@
-<h1>Home Page</h1>
+<div class="tl-page-header">
+	<div class="tl-header-content container-fluid">
+		<h2>To Do</h2>
+	</div>
+</div>
+
+
+<div class="tl-container container-fluid">
+	<div class="tl-content">
+
+		<div class="row tl-content-list">
+
+			<div class="col-md-12" ng-controller="TodoListController">
+				<ul class="unstyled">
+					<li class="tl-content-item" ng-repeat="todo in todos">
+						<!-- <input type="checkbox" ng-model="todo.done"> -->
+						<span class="done-{{todo.done}}">{{todo.text}}</span>
+					</li>
+				</ul>
+
+				
+				<div class="tl-content-input row">
+					<div class="col-md-12">
+					<form ng-submit="addTodo()">
+						<div class="input-group">
+	        				<input type="text" ng-model="todoText" class="form-control" placeholder="Add task">
+	        				<span class="input-group-btn">
+		        				<button class="btn btn-default add-item" type="submit">
+		        					<span class="glyphicon glyphicon-plus"></span>
+		        				</button>
+        					</span>
+        				</div>
+      				</form>
+      			</div>
+  				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
