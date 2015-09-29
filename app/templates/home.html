@@ -12,10 +12,25 @@
 
 			<div class="col-md-12" ng-controller="TodoListController">
 				<ul class="unstyled">
-					<li class="tl-content-item" ng-repeat="todo in todos">
-						<!-- <input type="checkbox" ng-model="todo.done"> -->
-						<span class="done-{{todo.done}}">{{todo.text}}</span>
+
+          <!-- NG-Repeat Todo in Todos -->
+					<li class="tl-content-item" ng-repeat="todo in todos" ng-class="{active: !taskCompleted, completed: taskCompleted}" ng-hide="shouldExpire(todo)">
+						<span class="">
+							{{todo.text}} | {{ todo.dateCreated | date : 'short'}}
+						</span>
+							<div class="tl-content-item-icons">
+								<button type="button" class="btn btn-link" ng-click="taskCompleted = !taskCompleted">
+									<span class="glyphicon glyphicon-ok" ng-class="{active: !taskCompleted, completed: taskCompleted}"></span>
+								</button>
+								
+								<button type="button" class="btn btn-link" ng-click="deleteTodo(todo)">
+									<span class="glyphicon glyphicon-remove"></span>
+								</button>
+								
+							</div>
+						</span>
 					</li>
+
 				</ul>
 
 				

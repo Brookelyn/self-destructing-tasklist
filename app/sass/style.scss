@@ -40,11 +40,6 @@ body {
 		.tl-content-list {
 			padding: 0.25em 1em 2em 1em;
 
-			// .tl-item-input {
-			// 	font-size: 1.5em;
-			// 	line-height: 2em;	
-			// }
-
 			ul {
 
 				li {
@@ -52,15 +47,41 @@ body {
 					font-size: 1.5em;
 					line-height: 2em;
 					border-bottom: 1px solid #ebe4eb;
+
+					.tl-content-item-icons {
+						float: right;
+
+						.btn-link {
+							font-size: 1em;
+							line-height: 0.5em;
+							color: #000;
+
+							
+						}
+
+						.glyphicon-ok {
+							margin-right: 20%;
+							color: green;
+
+							
+						}
+
+
+					}
 				}
 			}
-		}
+		}	
+	}
 
+	.completed, .delete-task {
+		color: #FF0000;
+		display: none;
+	}
+
+	.active, .active-task {
 		
 	}
 }
-
-
 
 
 	
