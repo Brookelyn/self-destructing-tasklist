@@ -28,3 +28,15 @@ body {
         font-size: 1.5em;
         line-height: 2em;
         border-bottom: 1px solid #ebe4eb; }
+        .tl-container .tl-content .tl-content-list ul li .tl-content-item-icons {
+          float: right; }
+          .tl-container .tl-content .tl-content-list ul li .tl-content-item-icons .btn-link {
+            font-size: 1em;
+            line-height: 0.5em;
+            color: #000; }
+          .tl-container .tl-content .tl-content-list ul li .tl-content-item-icons .glyphicon-ok {
+            margin-right: 20%;
+            color: green; }
+  .tl-container .completed, .tl-container .delete-task {
+    color: #FF0000;
+    display: none; }
