@@ -1,0 +1,66 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+// Tasklist basic styling //
+
+.tl-page-header {
+	background-color: #FFF;
+	border-bottom: 1px solid #ebe4eb;
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(235,228,235,0.63);
+	-moz-box-shadow: 0px 2px 5px 0px rgba(235,228,235,0.63);
+	box-shadow: 0px 2px 5px 0px rgba(235,228,235,0.63);
+	border-top: none;
+	margin-bottom: 2em;
+
+	.tl-header-content {
+		margin: 0 auto;
+		max-width: 760px;
+
+		h2 {
+			font-family: 'Great Vibes', cursive;
+			font-size: 4em;
+			// padding-bottom: 0.5em;
+			text-align: center;
+		}
+	}
+
+	
+}
+
+.tl-container {
+	margin: 0 auto;
+	max-width: 760px;
+	min-width: 320px;
+
+	.tl-content {
+		// width: 600px;
+		margin: 0 auto;		
+
+		.tl-content-list {
+			padding: 0.25em 1em 2em 1em;
+
+			// .tl-item-input {
+			// 	font-size: 1.5em;
+			// 	line-height: 2em;	
+			// }
+
+			ul {
+
+				li {
+					font-family: 'Roboto', sans-serif;
+					font-size: 1.5em;
+					line-height: 2em;
+					border-bottom: 1px solid #ebe4eb;
+				}
+			}
+		}
+
+		
+	}
+}
+
+
+
+
+	

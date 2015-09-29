@@ -1,0 +1,30 @@
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.tl-page-header {
+  background-color: #FFF;
+  border-bottom: 1px solid #ebe4eb;
+  box-shadow: 0px 2px 5px 0px rgba(235, 228, 235, 0.63);
+  border-top: none;
+  margin-bottom: 2em; }
+  .tl-page-header .tl-header-content {
+    margin: 0 auto;
+    max-width: 760px; }
+    .tl-page-header .tl-header-content h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4em;
+      text-align: center; }
+
+.tl-container {
+  margin: 0 auto;
+  max-width: 760px;
+  min-width: 320px; }
+  .tl-container .tl-content {
+    margin: 0 auto; }
+    .tl-container .tl-content .tl-content-list {
+      padding: 0.25em 1em 2em 1em; }
+      .tl-container .tl-content .tl-content-list ul li {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        line-height: 2em;
+        border-bottom: 1px solid #ebe4eb; }
