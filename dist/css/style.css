@@ -1,6 +1,22 @@
 body {
   font-family: 'Roboto', sans-serif; }
 
+.navigation {
+  margin-bottom: 2em;
+  background-color: #FFF;
+  border-bottom: 1px solid #ebe4eb;
+  box-shadow: 0px 2px 5px 0px rgba(235, 228, 235, 0.63);
+  border-top: none; }
+  .navigation a {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    text-align: center;
+    color: #000; }
+    .navigation a .active {
+      background-color: #751947; }
+  .navigation a::hover {
+    background-color: #751947; }
+
 .tl-page-header {
   background-color: #FFF;
   border-bottom: 1px solid #ebe4eb;
@@ -10,10 +26,6 @@ body {
   .tl-page-header .tl-header-content {
     margin: 0 auto;
     max-width: 760px; }
-    .tl-page-header .tl-header-content h2 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4em;
-      text-align: center; }
 
 .tl-container {
   margin: 0 auto;
@@ -37,6 +49,6 @@ body {
           .tl-container .tl-content .tl-content-list ul li .tl-content-item-icons .glyphicon-ok {
             margin-right: 20%;
             color: green; }
-  .tl-container .completed, .tl-container .delete-task {
+  .tl-container .completed {
     color: #FF0000;
     display: none; }

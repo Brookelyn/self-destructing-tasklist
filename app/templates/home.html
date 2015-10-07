@@ -1,10 +1,3 @@
-<div class="tl-page-header">
-	<div class="tl-header-content container-fluid">
-		<h2>To Do</h2>
-	</div>
-</div>
-
-
 <div class="tl-container container-fluid">
 	<div class="tl-content">
 
@@ -14,13 +7,15 @@
 				<ul class="unstyled">
 
           <!-- NG-Repeat Todo in Todos -->
-					<li class="tl-content-item" ng-repeat="todo in todos" ng-class="{active: !taskCompleted, completed: taskCompleted}" ng-hide="shouldExpire(todo)">
+					<li class="tl-content-item" ng-repeat="todo in todos" ng-hide="shouldExpire(todo) || todo.completed === true">
+
 						<span class="">
-							{{todo.text}} | {{ todo.dateCreated | date : 'short'}}
+							{{todo.text}}
 						</span>
 							<div class="tl-content-item-icons">
-								<button type="button" class="btn btn-link" ng-click="taskCompleted = !taskCompleted">
-									<span class="glyphicon glyphicon-ok" ng-class="{active: !taskCompleted, completed: taskCompleted}"></span>
+								
+								<button type="button" class="btn btn-link" ng-click="todoDone(todo)">
+									<span class="glyphicon glyphicon-ok"></span>
 								</button>
 								
 								<button type="button" class="btn btn-link" ng-click="deleteTodo(todo)">

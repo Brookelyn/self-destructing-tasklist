@@ -2,6 +2,31 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+.navigation {
+	margin-bottom: 2em;
+  background-color: #FFF;
+  border-bottom: 1px solid #ebe4eb;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(235,228,235,0.63);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(235,228,235,0.63);
+  box-shadow: 0px 2px 5px 0px rgba(235,228,235,0.63);
+  border-top: none;
+
+	a {
+		font-family: 'Great Vibes', cursive;
+		font-size: 4em;
+		text-align: center;
+    color: #000;
+
+    .active {
+      background-color: #751947;
+    }
+	}
+
+  a::hover {
+      background-color: #751947;
+    }
+}
+
 // Tasklist basic styling //
 
 .tl-page-header {
@@ -16,13 +41,6 @@ body {
 	.tl-header-content {
 		margin: 0 auto;
 		max-width: 760px;
-
-		h2 {
-			font-family: 'Great Vibes', cursive;
-			font-size: 4em;
-			// padding-bottom: 0.5em;
-			text-align: center;
-		}
 	}
 
 	
@@ -73,12 +91,13 @@ body {
 		}	
 	}
 
-	.completed, .delete-task {
+	.completed {
 		color: #FF0000;
 		display: none;
 	}
 
-	.active, .active-task {
+	.active {
+		
 		
 	}
 }

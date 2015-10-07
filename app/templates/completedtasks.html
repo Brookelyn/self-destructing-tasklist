@@ -1,0 +1,21 @@
+<div class="tl-container container-fluid">
+	<div class="tl-content">
+
+		<div class="row tl-content-list">
+
+			<div class="col-md-12" ng-controller="CompletedTasksController">
+				<ul class="unstyled">
+
+          <!-- NG-Repeat Todo in Todos -->
+					<li class="tl-content-item" ng-repeat="todo in todos" ng-show="todo.completed === true">
+						<span class="">
+							{{todo.text}}
+						</span>
+					</li>
+
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</div>
