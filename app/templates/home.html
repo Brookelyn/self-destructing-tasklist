@@ -4,11 +4,47 @@
 		<div class="row tl-content-list">
 
 			<div class="col-md-12" ng-controller="TodoListController">
+
+				<!-- Add new todos -->
+				<div class="tl-content-input row">
+					<div class="col-md-12">
+						<form ng-submit="addTodo()">
+							<div class="input-group input-group-lg">
+
+								
+					      <div class="input-group-btn">
+					      	
+					        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{dropdownText}} <span class="caret"></span></button>
+					        <ul class="dropdown-menu">
+					        	<li ng-repeat="choice in priorityChoices | orderBy: 'priority'"
+					        	    ng-click="setChoice(choice.id)" ng-model="choice.id">
+					        		<a href="#">{{choice.name}}</a>
+					        	</li>
+					        </ul>
+					      </div><!-- /btn-group -->
+	        		
+	        			<input type="text" ng-model="todoText" class="form-control" placeholder="Add task">
+							
+								<div class="input-group-btn">
+								
+				        	<button class="btn btn-default add-item" type="submit">
+		        				<span class="glyphicon glyphicon-plus"></span>
+		        			</button>
+				      	</div>
+			        				
+			        				
+	        		</div>
+	      		</form>
+      			
+  				</div>
+				</div>
+
+
+				<!-- Todo list: ng-repeat todo in todos -->
 				<ul class="unstyled">
+					<li class="tl-content-item" ng-repeat="todo in todos" ng-hide="shouldExpire(todo) || todo.completed === true" >
 
-          <!-- NG-Repeat Todo in Todos -->
-					<li class="tl-content-item" ng-repeat="todo in todos" ng-hide="shouldExpire(todo) || todo.completed === true">
-
+						<div class="priority-indicator" ng-class="setIndicator(todo)"></div>
 						<span class="">
 							{{todo.text}}
 						</span>
@@ -28,21 +64,7 @@
 
 				</ul>
 
-				
-				<div class="tl-content-input row">
-					<div class="col-md-12">
-					<form ng-submit="addTodo()">
-						<div class="input-group">
-	        				<input type="text" ng-model="todoText" class="form-control" placeholder="Add task">
-	        				<span class="input-group-btn">
-		        				<button class="btn btn-default add-item" type="submit">
-		        					<span class="glyphicon glyphicon-plus"></span>
-		        				</button>
-        					</span>
-        				</div>
-      				</form>
-      			</div>
-  				</div>
+
 
 			</div>
 		</div>
