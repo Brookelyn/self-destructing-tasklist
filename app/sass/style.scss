@@ -15,17 +15,29 @@ body {
 		font-family: 'Great Vibes', cursive;
 		font-size: 4em;
 		text-align: center;
-    color: #000;
+    color: #F0E6EB;
+  }
 
-    .active {
-      background-color: #751947;
-    }
+  .nav-pills {
+		li {
+			.active {
+				a:focus, a:hover {
+					color: #751947;
+					background-color: #FFF;
+				}
+			}
+		}
 	}
-
-  a::hover {
-      background-color: #751947;
-    }
 }
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus {
+	background-color: #FFF;
+	color: #751947;
+}
+
+
+
 
 // Tasklist basic styling //
 
@@ -41,9 +53,7 @@ body {
 	.tl-header-content {
 		margin: 0 auto;
 		max-width: 760px;
-	}
-
-	
+	}	
 }
 
 .tl-container {
@@ -58,7 +68,7 @@ body {
 		.tl-content-list {
 			padding: 0.25em 1em 2em 1em;
 
-			ul {
+			ul.unstyled {
 
 				li {
 					font-family: 'Roboto', sans-serif;
@@ -66,28 +76,45 @@ body {
 					line-height: 2em;
 					border-bottom: 1px solid #ebe4eb;
 
+					.priority-indicator {
+						width: 3px;
+						height: 0.75em;
+						display: inline-block;
+						background-color: #000;
+					}
+
+					.priority-urgent {
+		background-color: #FF0000;	
+	}
+
+	.priority-high {
+		background-color: #FFCC00;	
+	}
+
+	.priority-low {
+		background-color: #009900;	
+	}
+
 					.tl-content-item-icons {
 						float: right;
 
 						.btn-link {
 							font-size: 1em;
 							line-height: 0.5em;
-							color: #000;
-
-							
+							color: #000;							
 						}
 
 						.glyphicon-ok {
 							margin-right: 20%;
 							color: green;
-
-							
 						}
-
-
 					}
 				}
 			}
+		}
+
+		.tl-content-input {
+			margin-bottom: 1em;
 		}	
 	}
 
@@ -97,9 +124,30 @@ body {
 	}
 
 	.active {
-		
-		
+		color: #000;	
 	}
+
+	.dropdown-menu {
+		min-width: 2em;
+
+			ul {
+				li {
+					border-bottom: 0px solid #FFF;
+					font-family: 'Roboto', sans-serif;
+						font-size: 1.5em;
+						line-height: 2em;
+
+					a {
+						
+					}
+				}
+			}
+	}
+
+	
+	
+	
+
 }
 
 
