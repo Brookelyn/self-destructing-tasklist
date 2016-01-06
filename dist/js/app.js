@@ -19,6 +19,10 @@ todoApp.config(['$stateProvider', '$locationProvider', function($stateProvider, 
 }]);
 
 
+
+
+// Navigation controller
+
 todoApp.controller('AppCtrl', function($rootScope, $state) {
 	$rootScope.$on('$stateChangeSuccess',
   	function(event, toState, toParams, fromState, fromParams) {
@@ -26,6 +30,9 @@ todoApp.controller('AppCtrl', function($rootScope, $state) {
   	}
 	)
 });
+
+
+
 
 // Homepage controller
 
@@ -51,6 +58,7 @@ todoApp.controller('TodoListController', function($scope, $firebaseArray, $inter
 		$scope.todoPriority = $scope.priorityChoices[id];
 		if (id === 0) {
 			$scope.dropdownText = "Urgent";
+			console.log(id);
 		}
 		if (id === 1) {
 			$scope.dropdownText = "High";
@@ -66,10 +74,11 @@ todoApp.controller('TodoListController', function($scope, $firebaseArray, $inter
 			text: $scope.todoText, 
 			dateCreated: Firebase.ServerValue.TIMESTAMP,
 			completed: false,
-			priority: $scope.todoPriority.id || 2
+			priority: $scope.todoPriority.id
 		});
 		$scope.todoText = "";	
 		$scope.todoPriority = "";
+		$scope.dropdownText = "Priority";
 
 	};
 
