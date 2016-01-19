@@ -12,13 +12,12 @@ body {
     font-size: 4em;
     text-align: center;
     color: #F0E6EB; }
-  .navigation .nav-pills li .active a:focus, .navigation .nav-pills li .active a:hover {
-    color: #751947;
-    background-color: #FFF; }
-
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-  background-color: #FFF;
-  color: #751947; }
+  .navigation .nav-pills li.active a, .navigation .nav-pills li.active a:focus {
+    background-color: #FFF;
+    color: #751947; }
+  .navigation .nav-pills li:not(.active) > a:hover {
+    background-color: #751947;
+    color: #FFF; }
 
 .tl-page-header {
   background-color: #FFF;

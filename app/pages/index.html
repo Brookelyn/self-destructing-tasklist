@@ -36,9 +36,9 @@
 <body ng-controller="AppCtrl">
 
   <div class="navigation">
-  	<ul class="nav nav-pills nav-justified">
-    		<li role="presentation" class="{{$state.name === 'home' ? 'active' : ''}}"><a ui-sref="home" href="/">To do</a></li>
-    		<li role="presentation" class="{{$state.name === 'completedtasks' ? 'active' : ''}}"><a ui-sref="completedtasks" href="/completedtasks" data-toggle="tab">Done</a></li>
+  	<ul id="navvy" class="nav nav-pills nav-justified">
+      <li role="presentation" class="{{$state.name === 'home' ? 'active' : ''}}"><a ui-sref="home" href="/">To do</a></li>
+      <li role="presentation" class="{{$state.name === 'completedtasks' ? 'active' : ''}}"><a ui-sref="completedtasks" href="/completedtasks" data-toggle="tab">Done</a></li>
   	</ul>
   </div>
     
